@@ -1,0 +1,84 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #ffebee;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  transition: background-color 0.5s ease;
+}
+
+#dog-container {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Space between dog and text */
+  position: relative;
+}
+
+#chihuahua {
+  width: 300px; /* Adjust size */
+  cursor: pointer;
+  animation: tinyShake 0.5s ease-in-out infinite; /* Tiny shake */
+}
+
+@keyframes tinyShake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-2px); }
+  50% { transform: translateX(2px); }
+  75% { transform: translateX(-2px); }
+}
+
+#click-text {
+  font-size: 16px;
+  color: #ff4081;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 10px;
+  position: absolute;
+  bottom: -30px; /* Position below the dog */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#message-container {
+  text-align: left; /* Align text to the left */
+  max-width: 60%;
+}
+
+#message {
+  font-size: 24px;
+  color: #333;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+.hidden {
+  display: none;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1.2em;
+  margin: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #f44336;
+  color: white;
+}
+
+button:hover {
+  background-color: #d32f2f;
+}
+
+.angry-mode {
+  background-color: #ff0000; /* Red background */
+}
+
+.angry {
+  transform: scale(1.2); /* Grow the dog */
+  transition: transform 0.5s ease;
+}
